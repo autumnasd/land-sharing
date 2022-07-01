@@ -1,0 +1,157 @@
+@import "../home/image.wxss";
+@import "../home/skin.wxss";
+@import "../home/appt.wxss";
+
+ .main {
+    display: inline-block;
+    width: 100%;
+}
+
+.up {
+  position: absolute;
+  background-size: 100% 100%;
+  height: 50%;
+  width: 100%;
+  z-index: -1;
+  background-image: url(https://s2.loli.net/2022/06/15/sCEDnhjRvUamXZL.jpg);
+
+}
+.down {
+	width: 100%;
+	box-sizing: border-box;
+	padding: 10rpx 30rpx;
+    margin-top: 375rpx;
+
+}
+
+.menu {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	background-color: #fff;
+	padding: 20rpx 10rpx;
+	border-radius: 20rpx;
+}
+
+/* 
+view,
+scroll-view,
+swiper,
+button,
+input,
+textarea,
+label,
+navigator,
+image {
+	box-sizing: border-box;
+} */
+
+
+.menu .item {
+	width: 33.3%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 180rpx;
+
+}
+
+.menu .item .item-inner {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+}
+
+.menu .item-inner .img {
+	width: 75rpx;
+	height: 75rpx; 
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.menu .item-inner .img image {
+	width: 75rpx;
+	height: 75rpx;
+}
+
+.menu .item-inner .title {
+	margin-top: 20rpx;
+	font-size: 26rpx;
+	color: #333;
+}
+
+.meet-list-box {
+	width: 100%;
+	padding:0;
+	margin-top:40rpx;
+	overflow:unset;
+}
+
+
+
+ .searchbar-result{margin-top:0;font-size:0.8235294117647058rem}.searchbar-result .weui-cell__bd{padding:2px 0 2px 20px;color:var(--weui-FG-1)}.searchbar-result:before{display:none}
+ .input {
+  display: inline-block;
+}
+.search {
+  display: inline-block;
+  font-size: 28rpx;
+  white-space: nowrap;
+  margin-bottom: 5rpx;
+}
+.good-list {
+  width: 100%;
+  margin: 5rpx;
+}
+.good {
+  display: flex;
+  background-color:rgb(255, 255, 255);
+  border-bottom: 2rpx solid #ccc;
+  padding-left: 5rpx;
+  padding-top: 7rpx;
+  padding-bottom: 10rpx;
+}
+.good .info {
+  flex: 1;
+  padding: 5rpx;
+}
+.good .info .title {
+  display: block;
+  font-size: 30rpx;
+  font-weight: 700;
+}
+.good .info .detail {
+  display: block;
+  font-size: 23rpx;
+  color: #b8b1a9;
+}
+.good .info .price {
+  display: block;
+  font-size: 24rpx;
+  color: red;
+}
+.good .info .access_store {
+  display: block;
+  font-size: 26rpx;
+  color: #989b7a;
+}
+.good .info .btn{
+  display: flex;
+  justify-content: space-around;
+}
+.good .info .btn button{
+  width: 154rpx;
+  padding: 10rpx 20rpx;
+  font-size: 23rpx;
+}
+
+/* 解决底部导航栏遮挡的占位view的样式 */
+.standView{
+  width: 100%;
+  height: 200rpx;     /*  自定义一下需要的高度 */
+  /* background-color: black; */
+}

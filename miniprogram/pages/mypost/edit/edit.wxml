@@ -1,0 +1,50 @@
+<!--pages/mypost/edit/edit.wxml-->
+<view class="main">
+    <view class="bg-fff p-lr30 border-t">
+        <view class="ipt-wrap border-b flex ai-center">
+            <label for="" class="font14">土地标题</label>
+            <input type="text" class="ml40 flex1" maxlength="18" placeholder="请输入标题" bindblur="onInputTitle" value="{{title}}"></input>
+            <text style="color: red;">{{titleWarn}}</text>
+        </view>
+
+
+        <view class="ipt-wrap border-b">
+            <label class="font14">土地描述</label>
+            <textarea name="" id="" class="textarea _w100 p-tb30 lh10" maxlength="200" placeholder="请在此处输入详细描述" bindblur="onInputDesc" value="{{desc}}"></textarea>
+        </view>
+
+
+        <view class="ipt-wrap">
+            <label class="font14">添加图片</label>
+        </view>
+
+        <view class="image-list">
+            <!--最多可选9张图片，最好的效果是九宫格-->
+            <!--
+      2022年5月22日：
+      - 谢本齐：当此处为block时，relative无效，会导致子控件的aboslute无效
+    -->
+            <view wx:for="{{imageList}}" wx:for-item="item" wx:key="index" class="image-item">
+                <image class="image-item-i" mode="aspectFill" data-src="{{item}}" src="{{item}}"></image>
+                <image class="delete" data-index="{{index}}" src="./delete.png" bindtap="deleteImg" />
+            </view>
+            <!--当有九张图片后，不显示-->
+            <view wx:if="{{imageList.length < 9}}" bindtap="chooseImage" class="image-item" style=" display: flex;justify-content: center;align-items: center;">
+                <image class="add" src="./addImage.png" style="width:30%;height:30%;display:flex;justify-content:center;align-items:center" mode="aspectFill"></image>
+            </view>
+        </view>
+
+        <button style="width: auto;" bindtap="chooseAddress" class="button1 font12">请选择土地所在地</button>
+        <view class="ipt-wrap border-b flex ai-center">
+            <label for="" class="font14">土地位置：{{address}}</label>
+        </view>
+
+
+        <view class="ipt-wrap border-b flex ai-center">
+            <label for="" class="font14">土地面积</label>
+            <input class="ml40 flex1" maxlength="18" placeholder="面积（单位：亩）" bindblur="onInputArea" type="digit" value="{{area}}"></input>
+        </view>
+
+        <button style="width: auto;" bindtap="onSave" class="button1">保存</button>
+    </view>
+</view>

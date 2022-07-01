@@ -1,0 +1,18 @@
+<view class="meet-list-box sub-margin-bottom">
+    <block wx:for="{{postList}}" wx:key="index">
+        <!--左大图 Begin-->
+        <view data-index="{{index}}" bindtap="gotoDetail" class="item card-project shadow-project item-leftbig">
+            <image mode="aspectFill" class="leftbig-left loading" src="{{item.imgList[0]}}">
+            </image>
+            <view class="leftbig-right">
+                <view class="leftbig-title content-cut-one">{{item.title}}</view>
+                <view class="leftbig-desc">
+                    <text class="content-cut-two">{{item.desc}}</text>
+                </view>
+
+            </view>
+        </view>
+        <!--左大图 END-->
+    </block>
+</view>
+

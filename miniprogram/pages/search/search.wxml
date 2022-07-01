@@ -1,0 +1,39 @@
+<view class="top">
+  <view class="topsearch">
+    <view class="frame">
+      <input value="{{inputtingIext}}" bindinput="searchInput"></input>
+    </view>
+    <text style="width: auto;" bindtap="search">搜索</text>
+  </view>
+</view>
+<view class="history" wx:if="{{historyArray.length != 0}}">
+  <view class="history_title">
+    <text>历史搜索</text>
+    <image src="../../images/delete.png" mode="widthFix" style="width:5%;" bindtap="cleanHistory"></image>
+  </view>
+  <view class="history_text">
+    <text wx:for="{{historyArray}}" wx:key="key" data-index="{{index}}" bindtap="onTapHistory">{{item}}</text>
+  </view>
+</view>
+<view class="meet-list-box sub-margin-bottom">
+    <block wx:for="{{postList}}" wx:key="index">
+        <!--左大图 Begin-->
+        <view data-index="{{index}}" bindtap="gotoDetail" class="item card-project shadow-project item-leftbig">
+            <image mode="aspectFill" class="leftbig-left loading" src="{{item.imgList[0]}}"></image>
+            <view class="leftbig-right">
+                <view class="leftbig-title content-cut-one">{{item.title}}</view>
+                <view class="leftbig-desc">
+                    <text class="content-cut-two">{{item.desc}}</text>
+                </view>
+
+            </view>
+        </view>
+    </block>
+</view>
+
+
+
+<view class="none" wx:if="{{noResult}}">
+  没有找到相关信息
+</view>
+

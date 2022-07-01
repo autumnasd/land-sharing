@@ -1,0 +1,92 @@
+@import "../home/skin.wxss";
+@import "../me/base.wxss";
+@import "../me/project.wxss";
+@import "../me/text.wxss";
+@import "../me/icon.wxss";
+@import "../me/list.wxss";
+@import "../me/my_index_base.wxss";
+
+
+
+.begin {
+  height: 150rpx;
+  background-color:#4486d1;
+}
+
+.head {
+  display: flex;
+  flex-direction: colem;
+}
+
+.headIcon {
+  display: flex;
+  justify-content: center;
+}
+
+.nickName {
+  margin-top: 30rpx;
+  margin-left: 10rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.login {
+  display: flex;
+  color: #fff;
+  font-size: 15px;
+  margin-top: 15rpx;
+  justify-content: center;
+}
+
+.button {
+  margin: 10px;
+  font-size: 14px;
+}
+
+.head image {
+  margin-left: 80rpx;
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50%;
+}
+
+.hr {
+  width: 100%;
+  height: 15px;
+  background-color: #f4f5f6;
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+}
+
+.title {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  font-size: 15px;
+}
+
+.detail {
+  font-size: 15px;
+  position: absolute;
+  right: 10px;
+  height: 50px;
+  line-height: 50px;
+  color: #888;
+}
+
+.line {
+  border: 1px solid #ccc;
+  opacity:0.2 ;
+}
+/*投影*/
+.main .upside {
+	border-bottom: 10rpx solid var(--projectCompareColor);
+	border-bottom-left-radius: 120rpx;  
+}
+
+.main .upside .user-bar .detail .desc {
+	color: var(--projectCompareColor)
+}

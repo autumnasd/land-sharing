@@ -1,0 +1,52 @@
+<page-meta root-font-size="system" />
+<view class="page">
+	<view class="page__bd">
+		<view class="weui-search-bar" bindtap="gotoSearch">
+			<form class="weui-search-bar__form">
+				<view class="weui-search-bar__box">
+					<i class="weui-icon-search"></i>
+					<input class="weui-search-bar__input" placeholder="搜索"/>
+				</view>
+				<label class="weui-search-bar__label">
+					<i class="weui-icon-search"></i>
+					<span class="weui-search-bar__text">搜索</span>
+				</label>
+			</form>
+		</view>
+	</view>
+</view>
+<!-- 轮播图 -->
+<swiper indicator-dots="true" autoplay="true" interval="3000" duration="500" circular="true">
+  <swiper-item wx:for="{{swiperList}}" wx:key="index">
+    <image src="{{item.imgList[0]}}"></image>
+  </swiper-item>
+</swiper>
+
+<view class="meet-list-box sub-margin-bottom">
+  <block wx:for="{{postList}}" wx:key="index" >
+      <!--左大图 Begin-->
+      <view data-index="{{index}}" bindtap="gotoDetail" class="item card-project shadow-project item-leftbig">
+          <image mode="aspectFill" class="leftbig-left loading" src="{{item.imgList[0]}}">
+          </image>
+          <view class="leftbig-right">
+              <view class="leftbig-title content-cut-one">{{item.title}}</view>
+              <view class="leftbig-desc">
+                  <text class="content-cut-two">{{item.desc}}</text>
+              </view>
+              <view class="data">
+                  <view class="meet-tag-list text-cut">
+                  </view>
+                  <view class="meet-status"><text class="icon-remind margin-right-xxs"></text>{{item.publisher}}</view>
+              </view>
+          </view>
+      </view>
+      <!--左大图 END-->
+  </block>
+</view>
+
+
+
+
+<view class="standView">
+  没有更多了:·)
+</view>

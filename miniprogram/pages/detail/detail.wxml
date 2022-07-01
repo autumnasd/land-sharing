@@ -1,0 +1,47 @@
+<!--pages/detail/detail.wxml-->
+<view class="main">
+    <!--轮播-->
+    <swiper style="width: 100%; height: 500rpx;" indicator-dots="true" autoplay="true" interval="2000" duration="500">
+        <block wx:for="{{field.imgList}}" wx:key="index">
+            <swiper-item>
+                <image src="{{item}}"></image>
+            </swiper-item>
+        </block>
+    </swiper>
+    
+    <!--标题-->
+    <view class="ipt-wrap border-b flex ai-center">
+        <label for="" class="font24">{{field.title}}</label>
+    </view>
+
+    <!--描述-->
+    <view class="ipt-wrap border-b" wx:if="{{field.desc}}">
+        <label class="font14">{{field.desc}}</label>
+    </view>
+   
+    <!--面积-->
+    <view wx:if="{{field.area}}" class="ipt-wrap border-b flex ai-center">
+        <label for="" class="font14">{{field.area}}亩</label>
+    </view>
+
+    <!--位置-->
+    <view wx:if="{{field.location}}" class="ipt-wrap border-b flex ai-center">
+        <label for="" class="font14">位置：{{field.location.address}}</label>
+    </view>
+    <!--底部操作栏-->
+    <view class="operateBar">
+        <!--收藏-->
+        <view class="operateItem" bindtap="onTabStar">
+            <image wx:if="{{isStarred}}" src="../../images/starred.png"></image>
+            <image wx:else src="../../images/star.png"></image>
+            <view>收藏</view>
+        </view>
+        <view class="operateItem" bindtap="onTabChat">
+            <image src="../../images/chat.png"></image>
+            <view>交流</view>
+        </view>
+        <view>
+            <button bindtap="routeTo" class="btn" size="mini">导航到这里去</button>
+        </view>
+    </view>
+</view>

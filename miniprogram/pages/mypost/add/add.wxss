@@ -1,0 +1,114 @@
+/* pages/me/mypost/add/add.wxss */
+/*画廊*/
+.main {
+    background-color: #fff;
+}
+
+.image-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 18rpx;
+    width: 100%;
+}
+
+/*每张图片所占容器*/
+.image-item {
+    width: 31.16%;
+    height: 210rpx;
+    position: relative;
+    margin-right: 1.5%;
+    margin-bottom: 1.5%;
+    border-radius: 6%;
+
+}
+
+.image-item-i {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 6%;
+}
+
+/*删除按钮*/
+.delete {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50rpx;
+    height: 50rpx;
+}
+
+.add {
+    display: block;
+    width: 50%;
+    height: 50%;
+}
+
+.box {
+    display: flex;
+}
+
+.button1 {
+    background: #1296DB;
+    color: white;
+    border-radius: 60rpx;
+    flex: 1;
+}
+.kong {
+    flex: 1;
+}
+.button2 {
+    background: #FF3B3B;
+    color: white;
+    border-radius: 60rpx;
+    flex: 1;
+}
+
+/*  */
+.ipt-wrap {
+    min-height: 100rpx;
+    line-height: 100rpx;
+}
+
+.ipt-wrap label {
+    min-width: 120rpx;
+}
+
+.icon-youjiantou {
+    position: relative;
+    top: 1rpx;
+}
+
+.textarea {
+    height: 100rpx;
+}
+
+/*swtich样式-start*/
+/*swtich整体大小*/
+.wx-switch-input {
+    width: 82rpx !important;
+    height: 40rpx !important;
+}
+
+/*白色样式（false的样式）*/
+.wx-switch-input::before {
+    width: 80rpx !important;
+    height: 36rpx !important;
+}
+
+/*绿色样式（true的样式）*/
+.wx-switch-input::after {
+    width: 40rpx !important;
+    height: 36rpx !important;
+}
+
+.ipt-wrap:last-child {
+    border-bottom: none;
+}
+
+/*swtich样式end*/
+.region {
+    width: 500rpx;
+    position: absolute;
+    left: 150rpx;
+}

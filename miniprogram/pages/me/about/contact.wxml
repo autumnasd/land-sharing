@@ -1,0 +1,21 @@
+<view class="main padding-project">
+    <view class="main-content">
+        <view class="content card-project shadow-project">
+            <block>
+                <view class="title text-project">地址</view>
+                <view class="txt"><text>湖南工商大学</text></view>
+            </block>
+
+            <block>
+                <view class="title text-project">电话</view>
+                <view class="txt"><text>18879883531</text></view>
+            </block>
+
+            <block>
+                <view class="title text-project">客服微信号</view>
+                <view class="txt"><text>ZH20010325ZH</text></view>
+            </block>
+        </view>
+    </view>
+
+</view>

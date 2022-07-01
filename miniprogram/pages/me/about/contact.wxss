@@ -1,0 +1,26 @@
+.main .content .title { 
+	text-align: left; 
+	border-bottom:1rpx dashed #ccc;
+}
+
+@import "../../home/skin.wxss"; 
+@import "../about/about_index_base.wxss"; 
+@import "../../me/text.wxss";
+
+
+.margin-top {
+	margin-top: 30rpx;
+}
+
+view,
+scroll-view,
+swiper,
+button,
+input,
+textarea,
+label,
+navigator,
+image {
+	box-sizing: border-box;
+}
+

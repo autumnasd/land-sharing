@@ -1,0 +1,143 @@
+@import "../home/home.wxss";
+page{
+  background-color: white;
+}
+ 
+.top {
+  width: 100%;
+  background-color: #f7f7f7;
+}
+ 
+.topsearch {
+  width: 90%;
+  margin-left: 5%;
+  display: flex;
+  padding: 2% 0;
+  align-items: center;
+}
+ 
+.frame {
+  background-color: white;
+  width: 75%;
+  border-radius: 20rpx;
+  padding: 0 3%;
+}
+ 
+.frame>input {
+  font-size: 24rpx;
+  margin: 6rpx 0;
+}
+ 
+.topsearch>text {
+  width: 10%;
+  margin-left: 5%;
+  color: #a8a7a7fa;
+}
+ 
+.history {
+  background-color: white;
+  padding: 4%;
+}
+ 
+.history_title {
+  font-size: 30rpx;
+  display: flex;
+  justify-content: space-between;
+  color: #a8a7a7fa;
+  align-items: center;
+}
+ 
+.history_text {
+  padding: 4% 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+ 
+.history_text>text {
+  background-color: #f7f7f7;
+  padding: 1% 3%;
+  margin: 2%;
+  border-radius: 40rpx;
+  font-size: 30rpx;
+}
+ 
+.history_text>text:first-child{
+  margin-left: 0;
+}
+ 
+.none{
+  margin-top: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+ 
+.swiper_con {
+  width: 96%;
+  margin-left: 2%;
+  display: flex;
+  flex-wrap: wrap;
+}
+ 
+.swiper_con_view {
+  width: 48%;
+  height: 530rpx;
+  background-color: white;
+  margin: 10rpx 0;
+}
+ 
+.swiper_con_view:nth-child(even) {
+  margin-left: 4%;
+}
+ 
+.swiper_con_view_view {
+  margin-top: 5%;
+  display: flex;
+  align-items: center;
+}
+
+
+/*已发布列表相关*/
+.postList .postItem {
+  position: relative;
+  width: 100vw;
+  border-bottom: 2rpx solid #e9e9e9;
+  box-sizing: border-box;
+  background: #fff;
+  z-index: 999;
+}
+.postList .postItem movable-area {
+  height: 200rpx;
+  width: calc(100vw - 240rpx);
+}
+.postList .postItem movable-view {
+  height: 200rpx;
+  width: 100vw;
+  background: #fff;
+  z-index: 999;
+}
+.postMoableItem {
+  display: inline-flex;
+}
+
+.postList .postItem .postItemMovableOperates {
+  position: absolute;
+  display: inline-flex;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 240rpx;
+  font-size: 24rpx;
+  color: #ffffff;
+  line-height: 200rpx;
+  z-index: 1;
+  background: blue;
+  text-align: center;
+}
+.postMovableItemDesc {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 500rpx;
+}

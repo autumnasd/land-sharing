@@ -1,0 +1,56 @@
+<!--pages/me/mypost/mypost.wxml-->
+<!--已发布的列表-->
+<view wx:if="{{openid}}">
+  <view>
+    <!--列表-->
+    <!--实现左滑拉出编辑和删除功能-->
+    <view class="postList">
+        <view class="postItem" wx:for="{{postList}}" wx:for-index="index" wx:key="index">
+            <movable-area>
+                <movable-view
+                out-of-bounds="true"
+                direction="horizontal"
+                x="{{item.xmove}}"
+                inertia="true"
+                data-index="{{index}}"
+                bindtouchstart="handleTouchStart"
+                bindtouchend="handleTouchEnd"
+                bindchange="handleMovableChange">
+                    <view class="postMoableItem">
+                        <image src="{{item.imgList[0]}}" style="height: 200rpx; width: 200rpx;" mode="aspectFill"></image>
+                        <view>
+                            <view class="postMovableItemTitle">{{item.title}}</view>
+                            <view class="postMovableItemDesc">{{item.desc}}</view>
+                        </view>
+                    </view>
+                </movable-view>
+            </movable-area>
+            <!--左滑后显示的操作-->
+            <view class="postItemMovableOperates">
+                <view class="edit" data-index="{{index}}" bindtap="onEdit">编辑</view>
+                <view class="delete" data-index="{{index}}" bindtap="onDelete">删除</view>
+            </view>
+        </view>
+
+
+
+        
+    </view>
+
+
+
+    <view wx:if="{{postList.length == 0}}">
+      <view>您当前还未发布任何内容</view>
+    </view>
+
+
+  </view>
+</view>
+
+<view wx:else>
+  <text>当前未登录</text>
+</view>
+
+
+
+
